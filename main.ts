@@ -205,8 +205,7 @@ mySprite = sprites.create(img`
 mySprite.setPosition(85, 200)
 scene.cameraFollowSprite(mySprite)
 controller.moveSprite(mySprite, 9, j)
-tiles.setCurrentTilemap(tilemap`level9`)
-info.setLife(999)
+doSomething()
 forever(function () {
     if (mySprite.isHittingTile(CollisionDirection.Top)) {
         tiles.placeOnTile(mySprite, tiles.getTileLocation(5, 255))
@@ -219,5 +218,4 @@ forever(function () {
         game.splash("you win")
     }
     info.setScore(z)
-    info.setLife(y)
 })
